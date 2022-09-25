@@ -1,46 +1,85 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>Banco de Links</h1> 
+<p >
+<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+<img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/></br>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
 
-## Available Scripts
+</p>
+<p align="center">
+ 
+</p>
 
-In the project directory, you can run:
+<h4 > 
+    :construction:  Projeto em construção  :construction:
+</h4>
 
-### `npm start`
+### Tópicos 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+:small_blue_diamond: [Funcionalidades](#funcionalidades)
 
-### `npm test`
+:small_blue_diamond: [Layout do projeto](#layout-do-projeto-dash)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
-### `npm run build`
+## Descrição do projeto 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="justify">
+ Template feito para gerenciar dados e requisições de uma Api
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Funcionalidades
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+:heavy_check_mark: Criação, edição e exclusão de Links.
 
-### `npm run eject`
+:heavy_check_mark: Importação de Links
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Layout do projeto :dash:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://lh3.googleusercontent.com/pw/AM-JKLXxt-C-Qj2iaw3mvfWlsannSU8RG761yQdi8sGjHnaN6-0u1NSGs54yXXJQIlisSp6SQQDVU9Fsr2KDakylTULu-pjATImU-IVmk4Jw0-0lqoHdpkBb0QMfNInjEWLpqfBDHZ9ZPJNdi4IzGNEIzenh-g=w1362-h764-no?authuser=0" width=500vh> 
+<img src="https://lh3.googleusercontent.com/pw/AM-JKLWcNJ7LU5ptHLMFmJYigvVbTwC1PiPj5Xsp1KDLM8HnTuDOsDT5SrBgNWrmR46_02hg5TTYRM_IC1PGWwjngiRo9SYct0VzRjVtzG-oh6WBqeHqVD_MNr_pvlChwJz3JsnzROxwRXcUnfUj19wuCBzUzA=w1364-h765-no?authuser=0" width=500vh>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Como rodar a aplicação :arrow_forward:
 
-## Learn More
+## Método 1: Pelo github
+### 1) Clone o repositorio, instale os pacotes do Node e verifique as rotas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+``` 
+//on local
+git clone https://github.com/jpnc1695/devnology
+cd devnology
+npm install
+npm start
+``` 
+Abra o seu browser e verifique se o apiExpressMongo está funcionando acessando:</br>
+`http://localhost:3000/`   
+`http://localhost:3000/links`   
+`http://localhost:3000/tags`   
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Método 2: Pelo Vercel
+
+## Linguagens, dependencias e libs utilizadas :books:
+
+- ``TypeScript``
+- ``ReactJs``
+- ``Material UI (Mui)``
+- ``Axios``
+- ``Node Js``
+
+## Desenvolvedor:octocat:
+| [<img src="https://avatars.githubusercontent.com/u/84605494?v=4" width=115><br><sub>João Paulo N Costa</sub>](https://github.com/jpnv1695) |  
+| :---: |
+
+
+## Licença 
+
+The [Git hub]() (Git Hub)
+
+Copyright :copyright: 2022 - Bando de Negociações
+
+
