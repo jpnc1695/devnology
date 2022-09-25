@@ -46,9 +46,7 @@ const AdminLinks = () => {
                             <TableCell> {link.label} </TableCell>
                             <TableCell>
                                 <Link href={link.url} target="_blank" rel="noopener">
-                                    <Button variant="contained">
-                                        Link
-                                    </Button>
+                                    <Button variant="contained" >Link</Button>
                                 </Link>
                             </TableCell>
                             <TableCell>
