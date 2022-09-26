@@ -4,7 +4,7 @@ import { Link as RouterLink, Outlet } from 'react-router-dom'
 const PaginaPadrao = () => {
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Container maxWidth="xl">
           <Toolbar>
             <Typography variant="h6">
