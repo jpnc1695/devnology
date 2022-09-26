@@ -81,6 +81,6 @@ Abra o seu browser e verifique se o apiExpressMongo está funcionando acessando:
 
 The [Git hub]() (Git Hub)
 
-Copyright :copyright: 2022 - Bando de Negociações
+Copyright :copyright: 2022 - Bnco de Links
 
 
