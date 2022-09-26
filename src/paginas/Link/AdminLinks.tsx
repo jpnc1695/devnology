@@ -54,11 +54,9 @@ const AdminLinks = () => {
                                 </Link>
                             </TableCell>
                             <TableCell>
-                                <Link component={RouterLink} to='/links/:id'>
-                                    <Button variant="contained">
-                                        Editar
-                                    </Button>
-                                </Link>
+                                <Button href={`/links/${link._id}`} variant="contained">
+                                    Editar
+                                </Button>
                             </TableCell>
                             <TableCell>
                                 <Button

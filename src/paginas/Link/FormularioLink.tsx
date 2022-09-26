@@ -53,6 +53,11 @@ const FormularioLink = () => {
             .then(()=> {
               alert('Restaurante cadastrado com sucesso')
             })
+            .then(()=> {
+              setNomeLink('')
+              setUrl('')
+              setTag('')
+            })
           }
    
   };
