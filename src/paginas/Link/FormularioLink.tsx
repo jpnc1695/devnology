@@ -1,4 +1,5 @@
 import { TextField, Button, Typography, Box, Container, Paper, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import Mensagem from '../../componentes/Mensagem'
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
@@ -11,6 +12,9 @@ const FormularioLink = () => {
  
   const [nomeLink, setNomeLink] = useState('')
   const [url, setUrl] = useState('')
+
+  const [sucesso, setSucesso] = useState(false)
+  const [mensagem, setMensagem] = useState('')
 
   const[tag, setTag] = useState('')
   const [tags, setTags] = useState<ITag[]>([])
@@ -42,7 +46,15 @@ const FormularioLink = () => {
               tag:tag
             })
               .then(()=> {
-                alert('Restaurante atualizado com sucesso')
+                setMensagem("Link atualizado com sucesso")
+                setSucesso(true)
+                setNomeLink('')
+                setUrl('')
+                setTag('')
+              })
+              .catch(() => {
+                setMensagem("Erro na atualização do Link")
+                setSucesso(false)   
               })
           }else {
             http.post('/links', {
@@ -51,15 +63,17 @@ const FormularioLink = () => {
               tag:tag
             })
             .then(()=> {
-              alert('Restaurante cadastrado com sucesso')
-            })
-            .then(()=> {
+              setMensagem("Link Cadastrado com sucesso")
+              setSucesso(true)
               setNomeLink('')
               setUrl('')
               setTag('')
             })
+            .catch(() => {
+              setMensagem("Erro na cadastro do Link")
+              setSucesso(false)   
+            })
           }
-   
   };
 
   return (
@@ -70,7 +84,7 @@ const FormularioLink = () => {
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexGrow: 1 }}>
               <Box component='form' onSubmit={submeterForm} sx={{ width: '100%' }}>
                 <Typography component="h1" variant="h6">
-                  Fórmulario de Link
+                  Formulário de Link
                 </Typography>
                 <TextField
                   value={nomeLink}
@@ -122,6 +136,9 @@ const FormularioLink = () => {
           </Paper>
         </Container>
       </Box>
+             {
+             sucesso?<Mensagem mensagem={mensagem} tipoMensagem="success"/>:""
+             }
     </>
   )
 }
