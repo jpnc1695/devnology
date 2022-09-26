@@ -1,10 +1,13 @@
 import { TextField, Button, Typography, Box, Container, Paper, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import http from "../../http";
+import ILinks from "../../interface/ILink";
 import ITag from "../../interface/ITag"
 
 const FormularioLink = () => {
+  const parametros = useParams()
  
   const [nomeLink, setNomeLink] = useState('')
   const [url, setUrl] = useState('')
@@ -15,35 +18,42 @@ const FormularioLink = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-      http
-        .get<ITag[]>('/tags')
-        .then(res => setTags(res.data))
     
-  }, []);
+    http.get<ITag[]>('/tags')
+        .then(res => setTags(res.data))
+
+    if(parametros.id){
+      http.get<ILinks>(`links/${parametros.id}`)
+          .then(res => setNomeLink(res.data.label))
+
+     http.get<ILinks>(`links/${parametros.id}`)
+        .then(res => setUrl(res.data.url))
+    }
+    
+  }, [parametros]);
 
   const submeterForm = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+          e.preventDefault();
 
-    const formData = new FormData();
-
-    formData.append("label" , nomeLink)
-    formData.append("url" , url)
-    formData.append("tag" , tag)
-
-    http.request({
-        url:'/links',
-        method:'POST',
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        },
-        data: formData  
-    })
-    .then(()=> {
-       setNomeLink('')
-       setUrl('')
-       setTag('')
-       alert('Link cadastrado com sucesso')
-    })
+          if(parametros.id){
+            http.put(`links/${parametros.id}`,{
+              label:nomeLink,
+              url:url,
+              tag:tag
+            })
+              .then(()=> {
+                alert('Restaurante atualizado com sucesso')
+              })
+          }else {
+            http.post('/links', {
+              label:nomeLink,
+              url:url,
+              tag:tag
+            })
+            .then(()=> {
+              alert('Restaurante cadastrado com sucesso')
+            })
+          }
    
   };
 

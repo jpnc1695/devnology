@@ -8,7 +8,7 @@ function App() {
     <Routes>
         <Route path='/' element={<PaginaPadrao/>}>
           <Route path='links' element={<AdminLinks/>}/>  
-          <Route path='links/:id' element={<FormularioLink/>}/>
+          <Route path='links/novo' element={<FormularioLink/>}/>
          </Route>
      </Routes>  
   );
