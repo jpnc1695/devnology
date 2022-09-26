@@ -9,6 +9,7 @@ function App() {
         <Route path='/' element={<PaginaPadrao/>}>
           <Route path='links' element={<AdminLinks/>}/>  
           <Route path='links/novo' element={<FormularioLink/>}/>
+          <Route path='links/:id' element={<FormularioLink/>}/>
          </Route>
      </Routes>  
   );

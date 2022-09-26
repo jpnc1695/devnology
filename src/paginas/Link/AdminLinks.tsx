@@ -30,6 +30,9 @@ const AdminLinks = () => {
                             Titulo
                         </TableCell>
                         <TableCell>
+                            Tag
+                        </TableCell>
+                        <TableCell>
                             Link
                         </TableCell>
                         <TableCell>
@@ -44,6 +47,7 @@ const AdminLinks = () => {
                     {links.map(link =>
                         <TableRow key={link._id}>
                             <TableCell> {link.label} </TableCell>
+                            <TableCell> {link.tag.valor} </TableCell>
                             <TableCell>
                                 <Link href={link.url} target="_blank" rel="noopener">
                                     <Button variant="contained" >Link</Button>
