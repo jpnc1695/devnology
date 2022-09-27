@@ -25,7 +25,7 @@ const PaginaPadrao = () => {
           </Toolbar>
         </Container>
       </AppBar>
-      <Box>
+      <Box sx={{mt:10}}>
         <Container maxWidth="lg" sx={{ mt: 1 }}>
           <Paper sx={{ p: 2 }}>
             <Outlet />
