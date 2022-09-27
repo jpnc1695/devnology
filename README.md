@@ -62,7 +62,7 @@ Abra o seu browser e verifique se o apiExpressMongo está funcionando acessando:
 
 
 ## Método 2: Pelo Vercel
- <a href="https://devnology-6olb-lgq7x88qc-jpnc1695.vercel.app/"> Deploy Vercel<a/>
+ <a href="https://devnology-6olb-lgq7x88qc-jpnc1695.vercel.app/" target="_blank"> Deploy Vercel<a/>
 
 ## Linguagens, dependencias e libs utilizadas :books:
 
